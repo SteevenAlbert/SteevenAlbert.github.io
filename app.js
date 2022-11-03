@@ -74,6 +74,7 @@ function decryptMonoalphabetic(ciphertext, key, removespace){
     }
 
     let plaintext = ""
+    key= key.toUpperCase();
     ciphertext = ciphertext.toUpperCase();
     for(let i = 0; i<ciphertext.length; i++){
         if(removespace==true && ciphertext[i].charCodeAt(0) == 32){
