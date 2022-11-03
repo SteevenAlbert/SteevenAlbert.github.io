@@ -81,7 +81,7 @@ function decryptMonoalphabetic(ciphertext, key, removespace){
         if(removespace==true && ciphertext[i].charCodeAt(0) == 32){
             continue;
         }else if(ciphertext[i].charCodeAt(0) == 32){
-            ciphertext += " ";
+            plaintext += " ";
             continue;
         }
         plaintext+= String.fromCharCode(map.get(ciphertext[i])+65); 
