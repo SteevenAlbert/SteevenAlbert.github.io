@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Encrypt & Decrypt</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+       
+        <div class="title">
+            <button class="selected" id="caeser">Caeser Cipher</button>
+            <button class="link" id="mono">Monoalphabetic Cipher</button>
+        </div>
+		<div class="container">
+			<form action="" method="post" id="form" class="form">  
+                             
+                <div class="button b2 form" id="switch">
+                    <input type="checkbox"  id="encryptdecryptswitch" class="checkbox" onchange="switchmode(this)" />
+                    <div class="knobs"></div>
+                    <div class="layer"></div>
+                </div>
+
+            
+                    <div class="field" id = "shift">
+                        <label for="Plaintext" id="shiftlabel">Shift</label>
+                        <input type="text" id="Shift" name="Shift" placeholder="Enter the Shift you need" />
+                        <small id="error" class="error"></small>
+                    </div>
+          
+
+				<div class="field">
+					<label for="Plaintext" id="plaintextlabel">Plaintext</label>
+					<input type="text" id="Plaintext" name="Plaintext" placeholder="Enter your Plaintext" />
+				</div>
+				<div class="field">
+					<label for="Ciphertext" id="ciphertextlabel">Ciphertext</label>
+					<input type="text" id="Ciphertext" name="Ciphertext" placeholder="Your Ciphertext will appear here" disabled />
+				</div>
+                <input type="checkbox" id="removespace" name="removespace" style="width: 20px;"> Remove Spaces</input><br><br>
+				<div class="field">
+					<button type="button" class="full form" id="submit">Encrypt</button>
+				</div>
+			</form>
+		</div>
+
+		<script src="app.js"></script>
+	</body>
+</html>
