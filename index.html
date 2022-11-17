@@ -7,47 +7,64 @@
 	</head>
 	<body>
        
-        <div class="title">
-            <button class="selected" id="caeser">Caeser Cipher</button>
-            <button class="link" id="mono">Monoalphabetic Cipher</button>
-		
+        <div id="menu">
+			<ul>
+				<li><div class="selected" id="caeser">Caeser Cipher</div></li>
+				<li><div class="unselected" id="mono">Monoalphabetic Cipher</div></li>
+				<li><div class="unselected" id="playfair">Playfair Cipher</div></li>
+			</ul>
         </div>
+
 		<div class="container">
-			<form action="" method="post" id="form" class="form">  
-                             
+			<div class = "form-container">
+			<form action="" method="post" id="form" class="form">                  
                 <div class="button b2 form" id="switch">
                     <input type="checkbox"  id="encryptdecryptswitch" class="checkbox" onchange="switchmode(this)" />
                     <div class="knobs"></div>
                     <div class="layer"></div>
-                </div>
+                </div>      
 
-            
-                    <div class="field" id = "shift">
-                        <label for="Plaintext" id="shiftlabel">Shift</label>
-                        <input type="text" id="Shift" name="Shift" placeholder="Enter the Shift you need" />
-                        <small id="error" class="error"></small>
-                    </div>
-          
-
+				<div class="field" id = "shift">
+					<label for="Plaintext" id="shiftlabel">Shift</label>
+					<input type="text" id="Shift"  name="Shift"  placeholder="Enter the Shift you need"/>
+					<small id="error" class="error"></small>
+				</div>
+    
 				<div class="field">
 					<label for="Plaintext" id="plaintextlabel">Plaintext</label>
 					<input type="text" id="Plaintext" name="Plaintext" placeholder="Enter your Plaintext" />
 				</div>
+
 				<div class="field">
 					<label for="Ciphertext" id="ciphertextlabel">Ciphertext</label>
 					<input type="text" id="Ciphertext" name="Ciphertext" placeholder="Your Ciphertext will appear here" disabled />
 				</div>
+
                 <input type="checkbox" id="removespace" name="removespace" style="width: 20px;"> Remove Spaces</input><br><br>
+				
 				<div class="field">
 					<button type="button" class="full form" id="submit">Encrypt</button>
 				</div>
 			</form>
 		</div>
-		<div style="display: inline-block">
+		<div class="matrix-container" id="matrixdiv">
+			<table id="keytable">
+				<thead>
+					<tr>
+				
+					</tr>
+				</thead>
+				<tbody id="tbody">
+					
+				</tbody>
+			</table>
+		</div>
+		</div>
+	
 		<div class="footer">
 			<p>Created by: Steven Albert - 2019/01611</p>
-			</div>
 		</div>
+		
 		<script src="app.js"></script>
 	</body>
 </html>

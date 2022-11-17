@@ -3,46 +3,141 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+#menu{
+  display: block;
+  justify-content:flex-end;
+  flex-direction: column;
+  padding-right: 1rem;
+  pointer-events: none;
+  width: 290px;
+}
 
-button.link { 
+#menu li {
+  overflow: hidden;
+  line-height: 35px;
+}
+
+
+
+.form-container {
+  width:max-content;
+  float: left;
+  padding: 10px;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  width: 350px;
+}  
+.matrix-container{
+  top: 50%;
+  transform: translate(0,50%);
+  width:max-content;
+  float:right;
+  display: none;
+  padding-left: 5vh;
+  align-self: center;
+ 
+}
+table {
+  width: 150px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+th, td {
+  padding-left: 7px;
+  padding-right: 7px;
+  background-color: rgba(255,255,255,0.2);
+  color: #000000;
+  text-align: center;
+  transition: 0.3s;
+}
+th {
+  text-align: center;
+  transition: 0.3s;
+}
+thead th {
+  background-color: #55608f;
+  transition: 0.3s;
+}
+tbody tr:hover {
+  background-color: rgba(114, 114, 114, 0.3);
+  transition: 0.3s;
+}
+tbody td {
+  position: relative;
+  transition: 0.3s;
+}
+tbody tr {
+
+  transition: 0.3s;
+}
+tbody td:hover:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -9999px;
+  bottom: -9999px;
+  background-color: rgba(114, 114, 114, 0.3);
+  transition: 0.3s;
+  z-index: -1;
+}
+
+
+.unselected { 
+    pointer-events: auto;
     background:none; 
     border:none;  
     display: block;
     color: #929292;
     background: #f4f4f4;
-    transition: 0.3s;
+
     font-size: 1.5rem;
+   
 }
 
-button.selected { 
+.unselected:hover { 
+  background:none; 
+  display: block;
+  border: none;  
+  cursor: pointer;
+
+  color: #000000;
+
+  
+}
+
+.selected { 
+    pointer-events: auto;
     background:none; 
     border:none;  
     display: block;
+    color: #000000;
     background: #f4f4f4;
-    transition: 0.3s;
+
     font-weight: 700;
     font-size: 1.5rem;
     cursor: pointer;
+    transform: translate(100,-10px);
+ 
 }
-button.selected:hover { 
+.selected:hover { 
     background:none; 
     border:none;  
     display: block;
     background: #f4f4f4;
-    transition: 0.3s;
+ 
     font-weight: 700;
     color: #737373;
+    transform: translate(100,-10px);
+ 
 }
 
-button.link:hover { 
-    background:none; 
-    border:none;  
-    display: block;
-    background: #d1d1d1;
-	cursor: pointer;
-    transition: 0.3s;
-    color: #000000;
-}
+
 .error{
     color: red;
 }
@@ -75,13 +170,6 @@ body {
 	justify-content: center;
     min-height: 100vh;
     height: max-content;
-}
-
-.container {
-	background-color: #fff;
-	border-radius: 5px;
-	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-	width: 350px;
 }
 
 form {
